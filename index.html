@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netvoices</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="description" content="play music made by upcoming musicians" />
+  </head>
+  <body>
+    <div id="nav">
+      <h1 class="logo">Netvoices</h1>
+      <a href="./index.html">
+        <h4 style="color: blue" class="nav-set 1">Explore</h4></a
+      >
+      <a href="./latest.html">
+        <h4 style="color: rgb(59, 59, 171)" class="nav-set 2">Latest Gist</h4>
+      </a>
+      <a href="./upload.html"
+        ><h4 style="color: blue" class="nav-set 3">Upload Music</h4></a
+      >
+    </div>
+    <!--input-->
+    <div id="set-element">
+      <input id="search-setting" placeholder="search music" />
+      <span id="list-scroll">
+        <!-- <div class="music-list">Rather Be</div> -->
+        <!-- <div class="music-list">Faded</div>
+        <div class="music-list">Falling Down</div>
+        <div class="music-list">worst</div>
+        <div class="music-list">cost</div>
+        <div class="music-list">done</div>
+        <div class="music-list">fought</div>
+        <div class="music-list">which</div>
+        <div class="music-list">these</div>
+        <div class="music-list">felled</div> -->
+      </span>
+    </div>
+    <!--main music-->
+
+    <div class="player">
+      <div class="wrapper">
+        <div class="details">
+          <div class="now-playing"></div>
+          <div class="track-art"></div>
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
+        </div>
+        <div id="set-slide">
+          <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="0"
+              class="seek_slider"
+              onchange="seekTo()"
+            />
+            <div class="total-duration">00:00</div>
+          </div>
+
+          <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="99"
+              class="volume_slider"
+              onchange="setVolume()"
+            />
+            <i class="fa fa-volume-up"></i>
+          </div>
+
+          <div class="buttons">
+            <div class="random-track" onclick="randomTrack()">
+              <i class="fas fa-random fa-2x" title="random"></i>
+            </div>
+            <div class="prev-track">
+              <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+              <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track">
+              <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+            <div class="repeat-track" onclick="repeatTrack()">
+              <i class="fa fa-repeat fa-2x" title="repeat"></i>
+            </div>
+
+            <div id="download-btn">
+              <i class="fas fa-download"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="wave">
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script src="./index.js" defer></script>
+  </body>
+</html>
